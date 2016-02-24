@@ -1,17 +1,52 @@
-<?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
+<?php 
+/*
+Template Name: Página index
+*/ ?>
+<?php get_header(); ?>
 
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define('WP_USE_THEMES', true);
+<?php include TEMPLATEPATH . '/header1.php' ?>
+<?php include TEMPLATEPATH . '/contact.php' ?>
+<div class="Index-image">
+	<?php include TEMPLATEPATH . '/image.php' ?>
+</div>
+<main class="Index">
+	<div class="Index-section">
+		<?php rewind_posts(); ?>
+	<!-- 		// <?php query_posts('cat=2'); ?>
+	-->		
+		<?php query_posts('posts_per_page=7&order=Asc'); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<article class="Index-article">
+				<div class="Index-data">
+					<small><?php the_date(); ?></small>
+					<i>por <strong><?php the_author(); ?></strong></i>
+				</div>
+				<div class="Index-title">				
+					<a href="<?php the_permalink(); ?>"> 
+						<?php the_title(); ?>
+					</a>				
+				</div>
+				<div class="Index-excerpt">
+					<?php the_excerpt(); ?>
+					<a href="<?php the_permalink(); ?>"> 
+						ir al artículo
+					</a>
+				</div>
+				
+		</article>	
+			
+		<?php endwhile; ?>
+		<!-- post navigation -->
+		<?php else: ?>
+			<h3>No se encontraron entradas</h3>
+		<!-- no posts found -->
+		<?php endif; ?>
+	</div>
+	<div class="Index-sidebar">
+		<?php dynamic_sidebar('unique-sidebar-id'); ?>
+	</div>
+</main>
 
-/** Loads the WordPress Environment and Template */
-require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+<?php get_footer(); ?>
+
+
