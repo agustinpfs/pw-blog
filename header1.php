@@ -1,7 +1,12 @@
 <div class="Header">
 	<div class="Header-top">
 	 	<div class="Header-logo">
-			<h1><?php bloginfo('title' ); ?></h1> 
+	 		
+			<h1>
+				<a href="http://localhost/index/" class="Header-link"><?php bloginfo('title' ); ?>
+				</a>
+			</h1> 
+			
 			<?php bloginfo('description'); ?>
 	  	</div>
 	  	<div class="Header-menu">
