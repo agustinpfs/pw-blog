@@ -21,7 +21,7 @@ add_action('init', 'register_my_menus');
 // longitud excerpt----------------
 
 function longitud_excerpt($length) {
-    return 0;
+    return 20;
 }
 add_filter('excerpt_length', 'longitud_excerpt');
 
@@ -29,10 +29,10 @@ add_filter('excerpt_length', 'longitud_excerpt');
 
 // delete default [...] excerpt--------------
 
-function new_excerpt_more( $more ) {
-	return '';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
+// function new_excerpt_more( $more ) {
+// 	return '';
+// }
+// add_filter('excerpt_more', 'new_excerpt_more');
 
 
 

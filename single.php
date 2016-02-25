@@ -3,9 +3,7 @@
 
 
 <main class="Single">
-<div class="Single-header">
-</div>
-	<section class="Post">
+	<section class="Single-section">
  		<?php rewind_posts(); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="Post-article">
@@ -29,13 +27,13 @@
 				     <?php the_content(); ?>
 				</div>
 			
-				<div class="Post-data Post-data--footer  ">
+				<!-- <div class="Post-data Post-data--footer  ">
 					<div class="Post-cat">
 	 					<span>Categoría</span>
 	 					<small><?php the_category(); ?></small>
  					</div> 					
  					<small><em><?php comments_number() ?></em></small>
-				</div>			
+				</div>	 -->		
 			</article>
 
 			
@@ -46,15 +44,15 @@
 			<h3>No se encontraron entradas</h3>
 		<!-- no posts found -->
 		<?php endif; ?>
-		<div class="Single-comments">
-			<?php comments_template(); ?>
-		</div>
+			<div class="Single-comments">
+				<?php comments_template(); ?>
+			</div>
 
 
-		</section>
-		<div class="Post-sidebar">
-			<?php dynamic_sidebar('unique-sidebar-id'); ?>
-		</div>
+	</section>
+	<div class="Single-sidebar">
+		<?php dynamic_sidebar('unique-sidebar-id'); ?>
+	</div>
 
 
 </main>

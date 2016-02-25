@@ -9,13 +9,26 @@
 		position: relative
 		margin-left 2rem
 		margin-bottom 4rem
+		background-color white-d
+		padding .5rem
 		a 
 			text-decoration: none
 	
 	&-title
-		color blue
+		margin-top .5rem
+		margin-bottom .5rem
+		a 
+			color blue
+		
 	&-excerpt
 		color black
+	&-data 
+		display: flex 
+		justify-content: space-between
+		background-color alpha(blue,.1)
+		padding .2rem
+		align-items: center
+		// margin-bottom .5rem
 		
 		// &_content
 		// 	margin auto
@@ -26,6 +39,11 @@
 		// overflow: hidden
 		// position: relative
 		// cursor: pointer
+	&-content 
+		p 
+			margin 0
+	&-sidebar 
+		width 40vw
 			
 .widget_tag_cloud 
 	a

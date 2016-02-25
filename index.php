@@ -18,20 +18,23 @@ Template Name: Página index
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="Index-article">
 				<div class="Index-data">
-					<small><?php the_date(); ?></small>
-					<i>por <strong><?php the_author(); ?></strong></i>
+					<small><?php the_time('d-m-Y'); ?></small>
+					<small>por <i><strong><?php the_author(); ?></strong></i></small>
 				</div>
 				<div class="Index-title">				
 					<a href="<?php the_permalink(); ?>"> 
 						<?php the_title(); ?>
 					</a>				
 				</div>
-				<div class="Index-excerpt">
+				<div class="Index-content">
+					<?php the_content(); ?>
+				</div>
+				<!-- <div class="Index-excerpt">
 					<?php the_excerpt(); ?>
 					<a href="<?php the_permalink(); ?>"> 
 						ir al artículo
 					</a>
-				</div>
+				</div> -->
 				
 		</article>	
 			
