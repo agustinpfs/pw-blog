@@ -5,10 +5,11 @@
 
 <main class="CatTag">
 	<div class="CatTag-section">
-		<h1>Categoría: <?php wp_title(''); ?></h1>
+		<h1>Tag: <?php single_tag_title(); ?></h1>
 		<div class="article">
 		<?php rewind_posts(); ?>	
-			
+		<?php if (is_tag( )) { $tag = get_query_var('tag');
+			query_posts('showposts=7&tag='.$tag);} ?>	
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="Index-article">
 					<div class="Index-data">
