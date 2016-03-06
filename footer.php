@@ -1,9 +1,9 @@
 <div class="Footer">
   <div class="Footer-left">
     <div class="Footer-title">
-      <img src="http://localhost/wp-content/uploads/2016/02/logo.png" alt=""/></span><h1><?php bloginfo('title' ); ?></h1>
+      <h1>Pandawebs</h1>
     </div>
-    <div class="Footer-copy"><small>© 2016 GatelinSRL</small><small>Diseño por <a href="#">Pandawebs</a></small></div>
+    <div class="Footer-copy"><small>© 2016 Pandawebs</small><small>Otra idea de <a href="http://aguja2013.com/" target="blank">Aguja 20|13</a></small></div>
   </div>
   <div class="Footer-center">
     <aside class="Footer-menu">

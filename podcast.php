@@ -9,7 +9,7 @@
 
 				<?php the_title(); ?>
 			</div>
-				<?php the_content(); ?>
+				<?php the_content('Entrar'); ?>
 			
 		</div>
 		<?php endwhile; ?>

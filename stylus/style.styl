@@ -9,10 +9,10 @@ Version: 1.0.0*/
 black = #010101
 black-clear = #1d1d1d
 
-white = #F7F7F7
-// white = #F2F2F2
-white-d = #EBEBEB
-
+// white = #F7F7F7
+white = #FAFAFA
+// white-d = #EBEBEB
+white-d = #F7F7F7
 grey-c = #ccc
 
 blue = #0080ff
@@ -28,7 +28,7 @@ youtube = #e52d27
 // @import "general.styl"
 @import "normalize.styl"
 @import "header.styl"
-// @import "icon.styl"
+@import "icon.styl"
 @import "index.styl"
 @import "image.styl"
 @import "podcast.styl"
@@ -48,3 +48,9 @@ youtube = #e52d27
 body
 	font-family: 'Raleway', sans-serif
 	background-color white
+	
+
+.more-link 
+	background-color grey-c
+	color white !important
+	text-decoration: underline !important

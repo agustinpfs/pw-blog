@@ -1,13 +1,12 @@
 <div class="Header">
 	<div class="Header-top">
-	 	<div class="Header-logo">
-	 		
+	 	<div class="Header-logo">	 		
 			<h1>
 				<a href="http://localhost/index/" class="Header-link"><?php bloginfo('title' ); ?>
 				</a>
-			</h1> 
-			
-			<?php bloginfo('description'); ?>
+				<span><?php bloginfo('description'); ?></span>
+
+			</h1>			
 	  	</div>
 	  	<div class="Header-menu">
 	  		<div class="Header-menu_desktop">

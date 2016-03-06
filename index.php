@@ -9,6 +9,9 @@ Template Name: Página index
 <div class="Index-image">
 	<?php include TEMPLATEPATH . '/image.php' ?>
 </div>
+<div class="Index-podcast">
+	<?php include TEMPLATEPATH . '/podcast.php' ?>
+</div>
 <main class="Index">
 	<div class="Index-section">
 		<?php rewind_posts(); ?>
@@ -27,7 +30,9 @@ Template Name: Página index
 					</a>				
 				</div>
 				<div class="Index-content">
-					<?php the_content(); ?>
+					<a href="<?php the_permalink(); ?>"> 
+						<?php the_content('Entrar'); ?>
+					</a>
 				</div>
 				<!-- <div class="Index-excerpt">
 					<?php the_excerpt(); ?>
@@ -44,7 +49,11 @@ Template Name: Página index
 			<h3>No se encontraron entradas</h3>
 		<!-- no posts found -->
 		<?php endif; ?>
+		<div class="Index-dev">
+			<?php include TEMPLATEPATH . '/dev.php' ?>	
+		</div>
 	</div>
+
 	<div class="Index-sidebar">
 		<?php dynamic_sidebar('unique-sidebar-id'); ?>
 	</div>

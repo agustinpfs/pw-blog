@@ -1,7 +1,6 @@
 <div class="Image">
 	<div class="Image-background"></div>
 	<div class="Image-podcast">
-	<small>ksfjgh</small>
 		<?php include TEMPLATEPATH . '/podcast.php' ?>
 	</div>
 	<div class="Image-dev">
